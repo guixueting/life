@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-grid": "/component/vant/dist/grid/index",
+    "van-grid-item": "/component/vant/dist/grid-item/index"
+  }
+}

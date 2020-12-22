@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+}
+.header .h_swiper {
+  width: 100%;
+  height: 340rpx;
+}
+.header .h_swiper image {
+  width: 100%;
+}
+.bottom {
+  display: flex;
+}
+.bottom .item {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.bottom .item image {
+  width: 100%;
+}

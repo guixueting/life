@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-search": "/component/vant/dist/search/index",
+    "van-cell": "/component/vant/dist/cell/index",
+    "van-cell-group": "/component/vant/dist/cell-group/index",
+    "van-rate": "/component/vant/dist/rate/index",
+    "van-loading": "/component/vant/dist/loading/index"
+  },
+  "onReachBottomDistance":20,
+  "enablePullDownRefresh":true
+}

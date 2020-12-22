@@ -1,0 +1,27 @@
+<view class="slides">
+  <!-- 头部轮播 -->
+  <view class="header">
+    <swiper class="h_swiper" indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.3)" autoplay="false" circular="{{true}}">
+      <!-- 利用request请求的数据来 加载到页面上 -->
+      <swiper-item wx:for="{{swiperd}}" wx:key="id" wx:for-item="item">
+        <image src="{{item.image}}" mode="widthFix" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 宫格 利用vant-app插件 -->
+  <view class="center">
+    <van-grid column-num="3">
+    <!-- 可加一个Url点击跳转到列表页 -->
+      <van-grid-item url="/pages/list/list?id={{item.id}}" icon="{{item.icon}}" text="{{item.name}}" wx:for="{{gongge}}" wx:for-item="item" wx:key="id" />
+    </van-grid>
+  </view>
+  <!-- 入口模块 -->
+  <view class="bottom">
+  <navigator class="item" url="../message/message">
+    <image src="/assets/images/link-01.png" mode="widthFix" />
+  </navigator>
+  <navigator class="item" url="../message/message">
+    <image src="/assets/images/link-02.png" mode="widthFix" />
+  </navigator>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+.swi {
+  width: 100%;
+  height: 500rpx;
+}
+.swi image {
+  width: 100%;
+  height: 100%;
+}
+.jieshao {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 20rpx 30rpx;
+  color: #6e737e;
+  border-top: 1rpx solid #ddd;
+}
+.jieshao .shop-name {
+  font-size: 20px;
+  color: #38404a;
+}
+.pinglun {
+  margin-top: 20rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  color: #345;
+  font-size: 24rpx;
+}
+.pinglun .item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pinglun .item .name {
+  font-size: 36rpx;
+}
+.pinglun .item .date {
+  align-self: flex-end;
+}
+.pinglun .item .rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.pinglun .item .images image {
+  width: 110rpx;
+  height: 110rpx;
+  margin: 10rpx;
+}

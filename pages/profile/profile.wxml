@@ -1,0 +1,22 @@
+<!-- 头像 -->
+<view class="touxiang">
+<!-- button的微信开放能力 来实现获取用户信息 登陆换头像 -->
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="touLogin" class="btn">
+        <image src="{{imgpath}}" mode="widthFix"></image>
+    </button>
+    <view wx:else>请升级微信版本</view>
+</view>
+<!-- 通过vant中cell来做单元格 -->
+<van-cell-group>
+    <van-cell is-link title="个人资料" link-type="navigateTo" url="/pages/dashboard/index" />
+    <van-cell is-link title="我的优惠卷" link-type="navigateTo" url="/pages/dashboard/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell is-link title="常见问题" link-type="navigateTo" url="/pages/dashboard/index" />
+    <van-cell is-link title="使用条款" link-type="navigateTo" url="/pages/dashboard/index" />
+    <van-cell is-link title="常见问题" link-type="navigateTo" url="/pages/dashboard/index" />
+    <van-cell is-link title="使用条款" link-type="navigateTo" url="/pages/dashboard/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell is-link title="设置" link-type="navigateTo" url="/pages/dashboard/index" />
+</van-cell-group>

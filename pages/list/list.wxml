@@ -1,0 +1,26 @@
+<view>
+    <!-- 从vant-ui中找搜索框 -->
+    <!-- value为搜索的文字 小程序的双向绑定用 bind:change="onChange" -->
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" bind:change="onChange" />
+    <!-- 列表组件 -->
+    <van-cell-group>
+    <!--van-cell点击每一小条数据可以来到详情页  -->
+        <van-cell url="/pages/detali/detail?id={{item.id}}" icon="{{item.images[0]}}" wx:for="{{list}}" wx:key="id" center use-label-slot title="{{item.name}}" border="{{ false }}">
+            <!-- label="描述信息"内容有很多，可设置一个插槽use-label-slot开启插槽 -->
+            <view slot="label" class="label">
+                <text class="shop-tel">电话：{{item.phone}}</text>
+                <text class="shop-address">地址：{{item.address}}</text>
+                <text class="shop-time">营业时间：{{item.businessHours}}</text>
+            </view>
+            <!-- value="内容"是评分 ,写一个插槽不写名字默认是 value,size为星星大小 -->
+            <view>
+                <van-rate value="{{ starvalue }}" bind:change="onChangeStar" size="{{14}}" />
+            </view>
+        </van-cell>
+    </van-cell-group>
+    <!-- 设置上拉在加载 和 下拉刷新 hasMore为true正在加载，false全部加载完毕 -->
+    <view class="load">
+        <van-loading type="spinner" color="#1989fa" wx:if="{{hasMore}}" />
+        <view wx:else>我是有底线的···</view>
+    </view>
+</view>

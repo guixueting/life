@@ -1,0 +1,13 @@
+<!-- 使用panel面板 -->
+<view class="box">
+    <block wx:for="{{messages}}" wx:key="date">
+        <van-panel title="{{item.title}}" desc="{{item.date}}" header-class="hhh">
+            <view class="content">
+                <image class="img" src="{{item.image}}" mode="widthFix" />
+                <text>{{item.summary}}</text>
+            </view>
+        </van-panel>
+    </block>
+</view>
+<!-- // 页面载入时滚动到页面底部,通过它来获取位置信息-->
+<view class="bottom"></view>
